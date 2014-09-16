@@ -57,6 +57,14 @@ persist.camera.stats.test=5 \
 persist.vendor.qti.telephony.vt_cam_interface=1 \
 vidc.enc.dcvs.extra-buff-count=2
 
+
+
+# Additional props
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.vendor.qti.cgroup_follow.enable=true
+persist.vendor.qti.inputopts.enable=true
+persist.vendor.qti.inputopts.movetouchslop=0.6
+ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
 # Cne
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.cne.feature=1

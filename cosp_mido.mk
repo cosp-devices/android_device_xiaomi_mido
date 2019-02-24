@@ -24,6 +24,9 @@ $(call inherit-product, device/xiaomi/mido/device.mk)
 # Inherit some common AOSP stuff.
 $(call inherit-product, vendor/cosp/config/common_full_phone.mk)
 
+# Inherit from custom vendor
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
+
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions

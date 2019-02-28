@@ -28,7 +28,6 @@ $(call inherit-product, vendor/cosp/config/common_full_phone.mk)
 $(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
-OTA_TYPE=OFFICIAL
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido

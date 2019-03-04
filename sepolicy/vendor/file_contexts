@@ -28,6 +28,10 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.xiaomi_mido		u:object_r:hal_fingerprint_mido_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.xiaomi_mido					u:object_r:hal_ir_default_exec:s0
 
+#Health HAl
+/(vendor|system/vendor)/bin/hw/android\.hardware\.health@2\.0-service\.mido        u:object_r:hal_health_default_exec:s0
+/persist/battery(/.*)?                   u:object_r:persist_battery_file:s0
+
 # Input files
 /(vendor|system/vendor)/usr/idc(/.*)?		u:object_r:idc_file:s0
 /(vendor|system/vendor)/usr/keylayout(/.*)?	u:object_r:keylayout_file:s0

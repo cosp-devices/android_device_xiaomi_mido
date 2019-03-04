@@ -55,6 +55,16 @@ on early-boot
     # Allow subsystem (modem etc) debugging
     write /sys/kernel/boot_adsp/boot 1
     write /sys/kernel/boot_slpi/boot 1
+	
+	# vendor.health-hal needs to be able to RW
+    chown system system /sys/devices/soc/qpnp-fg-22/cycle_counts_bins
+    # HardwareInfo needs to be able to read CC bins
+    chmod 644 /sys/devices/soc/qpnp-fg-22/cycle_counts_bins
+
+    # dumpstate needs to read, vendor.health-hal needs to be able to RW
+    chown system system /sys/devices/soc/qpnp-fg-22/power_supply/bms/charge_full
+    # HardwareInfo needs to be able to read charge_full
+    chmod 644 /sys/devices/soc/qpnp-fg-22/power_supply/bms/charge_full
 
     exec u:r:qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
 
@@ -354,6 +364,9 @@ on post-fs-data
 
     #Start move time data to /data/vendor once post-fs-data done
     start vendor.move_time_data
+	
+	# for android.hardware.health@2.0-service.mido cycle count backup
+    mkdir /persist/battery 0700 system system
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "

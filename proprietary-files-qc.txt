@@ -390,7 +390,11 @@ vendor/lib/libwms.so
 vendor/lib64/libwms.so
 
 # Perf - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
+lib/vendor.qti.hardware.iop@1.0.so
+lib/vendor.qti.hardware.iop@2.0.so
 lib/vendor.qti.hardware.perf@1.0.so
+lib64/vendor.qti.hardware.iop@1.0.so
+lib64/vendor.qti.hardware.iop@2.0.so
 lib64/vendor.qti.hardware.perf@1.0.so
 vendor/bin/energy-awareness
 vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
@@ -400,16 +404,41 @@ vendor/etc/perf/commonresourceconfigs.xml
 vendor/etc/perf/perfboostsconfig.xml
 vendor/etc/perf/targetconfig.xml
 vendor/etc/perf/targetresourceconfigs.xml
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so
 vendor/lib/libperfgluelayer.so
+vendor/lib/libqti-iopd-client.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
+vendor/lib/vendor.qti.hardware.iop@1.0.so
+vendor/lib/vendor.qti.hardware.iop@2.0.so
 vendor/lib/vendor.qti.hardware.perf@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so
 vendor/lib64/libperfgluelayer.so
+vendor/lib64/libqti-iopd-client.so
 vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-perfd.so
 vendor/lib64/libqti-util.so
+vendor/lib64/vendor.qti.hardware.iop@1.0.so
+vendor/lib64/vendor.qti.hardware.iop@2.0.so
 vendor/lib64/vendor.qti.hardware.perf@1.0.so
+
+# QTI Performance libs - from sakura-user-9-PKQ1.180917.001-9.3.1-release-keys
+-framework/QPerformance.jar 
+-framework/UxPerformance.jar 
+bin/perfservice 
+etc/init/perfservice.rc 
+etc/perf/whitelistedapps.xml 
+lib/libqti-at.so 
+lib/libqti-perfd-client_system.so 
+lib/libqti-iopd-client_system.so 
+lib/libqti-util_system.so
+lib/libqti_performance.so
+lib64/libqti-at.so
+lib64/libqti-perfd-client_system.so
+lib64/libqti-iopd-client_system.so
+lib64/libqti-util_system.so
+lib64/libqti_performance.so
 
 # Peripheral manager - from Tissot PKQ1.180917.001/V10.0.2.0.PDHMIFK
 vendor/bin/pm-proxy

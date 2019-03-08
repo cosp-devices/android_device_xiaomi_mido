@@ -562,6 +562,9 @@
     <!-- Button brightness -->
     <bool name="config_button_brightness_support">true</bool>
 
+    <!-- AlwaysOnDisplay -->
+    <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
+
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
          that can be set by the user. -->
